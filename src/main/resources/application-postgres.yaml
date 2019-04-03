@@ -1,7 +1,13 @@
+postgres.datasource:
+  url: jdbc:postgresql://localhost:5432/bar?currentSchema=public
+  username: postgres
+  password: 123456
+  driver-class-name: org.postgresql.Driver
+  
 flyway:
   user: postgres
   password: 123456
   schema: public
   baselineOnMigrate: true
   url: jdbc:postgresql://localhost:5432/bar?currentSchema=public
-  locations: classpath:/db/migration/postgres
+  locations: classpath:/db/migration/postgres,classpath:/db/migration/common

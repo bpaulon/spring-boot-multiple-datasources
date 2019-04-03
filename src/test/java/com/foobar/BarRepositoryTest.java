@@ -9,7 +9,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.foobar.bar.domain.Bar;
 import com.foobar.bar.domain.BarAutoID;
-import com.foobar.bar.repo.BarAutoIDRepository;
 import com.foobar.bar.repo.BarRepository;
 
 
@@ -23,8 +22,6 @@ public class BarRepositoryTest {
   @Autowired
   private BarRepository barRepo;
   
-  @Autowired
-  private BarAutoIDRepository barAutoIdRepo;
   
   @Test
   public void testPersist() {
