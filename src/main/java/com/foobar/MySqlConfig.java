@@ -54,7 +54,7 @@ public class MySqlConfig {
   public static HibernateJpaVendorAdapter makeVendorAdaptor() {
     HibernateJpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter();
     jpaVendorAdapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect");
-    //jpaVendorAdapter.setGenerateDdl((Boolean) properties.get("generateDdl"));
+    jpaVendorAdapter.setGenerateDdl(true);
     jpaVendorAdapter.setShowSql(true);
 
     return jpaVendorAdapter;

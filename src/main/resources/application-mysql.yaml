@@ -10,4 +10,4 @@ flyway:
   schema: test
   baselineOnMigrate: true 
   url: jdbc:mysql://localhost:3306/test
-  locations: classpath:/db/migration/mysql,classpath:/db/migration/common
+  locations: classpath:/db/migration/common,classpath:/db/migration/mysql

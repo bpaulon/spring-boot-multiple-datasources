@@ -10,4 +10,4 @@ flyway:
   schema: public
   baselineOnMigrate: true
   url: jdbc:postgresql://localhost:5432/bar?currentSchema=public
-  locations: classpath:/db/migration/postgres,classpath:/db/migration/common
+  locations: classpath:/db/migration/postgres

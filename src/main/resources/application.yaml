@@ -1,5 +1,5 @@
-spring: 
+spring:
+  # Profile specific properties can be defined by using the following convention: application-{profile}.yaml|properties
   profiles.active: mysql
-  jpa.database: default
   
 server.port: 801
