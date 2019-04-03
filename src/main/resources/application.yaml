@@ -1,0 +1,17 @@
+spring: 
+  profiles.active: postgres
+  jpa.database: default
+  
+mysql.datasource:
+  url: jdbc:mysql://localhost:3306/test
+  username: root
+  password: pass
+  driver-class: org.mariadb.jdbc.Driver
+
+postgres.datasource:
+  url: jdbc:postgresql://localhost:5432/bar?currentSchema=public
+  username: postgres
+  password: 123456
+  driver-class-name: org.postgresql.Driver
+
+server.port: 801

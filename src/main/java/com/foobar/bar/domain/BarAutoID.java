@@ -5,27 +5,25 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.GenericGenerator;
+
 @Entity
-@Table(name = "bar")
-public class Bar {
+@Table(name = "bar_auto")
+public class BarAutoID {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="bar_id_seq")
-  @SequenceGenerator(name="bar_id_seq", sequenceName="bar_id_seq", allocationSize=1)
-  @Column(name = "ID")
+  //@GeneratedValue(strategy = GenerationType.AUTO)
+  //@GenericGenerator(name = "native", strategy = "native")
+  @GeneratedValue(strategy=GenerationType.IDENTITY)
+  @Column(name = "id", updatable = false, nullable = false)
   private Long id;
-
+  
   @Column(name = "BAR")
   private String bar;
-
-  public Bar(String bar) {
-    this.bar = bar;
-  }
-
-  Bar() {
+  
+  public BarAutoID() {
     // Default constructor needed by JPA
   }
 
