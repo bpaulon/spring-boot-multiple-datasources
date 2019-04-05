@@ -1,5 +1,5 @@
 spring:
   # Profile specific properties can be defined by using the following convention: application-{profile}.yaml|properties
-  profiles.active: mysql
+  profiles.active: ${connected.database},dev
   
 server.port: 801

@@ -1,7 +1,5 @@
 package com.foobar;
 
-import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +15,6 @@ public class MySqlFooController {
   @Autowired
   private FooRepository fooRepo;
 
-  @Transactional
   @RequestMapping("/foo")
   public Foo addFoo() {
     return fooRepo.save(new Foo("aaa"));

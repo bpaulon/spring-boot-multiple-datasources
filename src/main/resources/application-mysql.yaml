@@ -1,13 +1,13 @@
-mysql.datasource:
+datasource:
   url: jdbc:mysql://localhost:3306/test
   username: root
   password: pass
   driver-class: org.mariadb.jdbc.Driver
   
 flyway:
-  user: root
-  password: pass
+  user: ${datasource.username}
+  password: ${datasource.password}
   schema: test
-  baselineOnMigrate: true 
-  url: jdbc:mysql://localhost:3306/test
+  baselineOnMigrate: true
+  url: ${datasource.url}
   locations: classpath:/db/migration/common,classpath:/db/migration/mysql

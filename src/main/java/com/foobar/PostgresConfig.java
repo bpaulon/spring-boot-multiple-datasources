@@ -26,7 +26,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class PostgresConfig {
 
   @Bean(name = "barDataSource")
-  @ConfigurationProperties(prefix = "postgres.datasource")
+  @ConfigurationProperties(prefix = "datasource")
   public DataSource dataSource() {
     return DataSourceBuilder.create().build();
   }

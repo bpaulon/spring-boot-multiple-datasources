@@ -28,7 +28,7 @@ public class MySqlConfig {
 
   @Primary
   @Bean(name = "dataSource")
-  @ConfigurationProperties(prefix = "mysql.datasource")
+  @ConfigurationProperties(prefix = "datasource")
   public DataSource dataSource() {
     return DataSourceBuilder.create().build();
   }
